@@ -3,16 +3,20 @@ var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
-var DIST_DIR = path.resolve(__dirname, 'dist');
+var BUILD_DIR = path.resolve(__dirname, 'build');
 var SRC_DIR = path.resolve(__dirname, 'src');
 
 var config = {
     entry: {        
         index: SRC_DIR + '\\app\\index.js',
+        shop: SRC_DIR + '\\app\\shop.js',
+        cart: SRC_DIR + '\\app\\cart.js',
+        checkout: SRC_DIR + '\\app\\checkout.js',
+        'single-product': SRC_DIR + '\\app\\single-product.js',
         sample: SRC_DIR + '\\app\\sample.js'
     },
     output: {
-        path: DIST_DIR + '\\app',
+        path: BUILD_DIR + '\\app',
         filename: '[name].bundle.js',
         publicPath: '/app/'
     },
