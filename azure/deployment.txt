@@ -1,0 +1,15 @@
+az webapp deployment user set --user-name demo-app --password Bawu6741@zure
+
+az webapp create --name demo-shopping  --resource-group Resource-Transport-Group --plan AppService-Transport-Plan --deployment-local-git
+
+http://demo-shopping.azurewebsites.net
+
+az webapp deployment source config-local-git --name demo-shopping --resource-group Resource-Transport-Group --query url --output tsv
+
+https://demo-app@demo-shopping.scm.azurewebsites.net/demo-shopping.git
+
+git remote add azure https://demo-app@demo-shopping.scm.azurewebsites.net/demo-shopping.git
+
+git push azure master
+
+http://demo-traffic.azurewebsites.net
