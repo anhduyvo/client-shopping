@@ -1,6 +1,6 @@
 {
   "name": "client-shopping",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "react js + webpack + ES 2016\r - npm install\r - yarn install",
   "main": "app.js",
   "scripts": {
