@@ -1,0 +1,23 @@
+{
+  "name": "client-shopping",
+  "version": "1.0.0",
+  "description": "react js + webpack + ES 2016\r - npm install\r - yarn install",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhduyvo/client-shopping.git"
+  },
+  "author": "VO DUY ANH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anhduyvo/client-shopping/issues"
+  },
+  "homepage": "https://github.com/anhduyvo/client-shopping#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
