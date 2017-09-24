@@ -1,7 +1,7 @@
 react js + webpack + ES 2016
+- npm install
+- yarn install
 
-npm install
-yarn install
 
 React's component life cycle
 - componentWillMount(): immediately before initial rendering
