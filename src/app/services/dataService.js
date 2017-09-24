@@ -1,46 +1,41 @@
-var $ = require('jquery');
 
-module.exports = {
-    get: function(url){
-        return new Promise(function(success, error){
-            $.ajax({
-                url:url,
-                dataType:'json',
-                success: success,
-                error: error
-            })
-        })
-    },
-    post: function(url, data){
-        return new Promise(function(success, error){
-            $.ajax({
-                url:url,
-                type:'POST',
-                data: data,
-                success: success,
-                error: error
-            })
-        })
-    },
-    patch: function(url, data){
-        return new Promise(function(success, error){
-            $.ajax({
-                url:url,
-                type:'PATCH',
-                data: data,
-                success: success,
-                error: error
-            })
-        })
-    },
-    del: function(url){
-        return new Promise(function(success, error){
-            $.ajax({
-                url:url,
-                type:'DELETE',                
-                success: success,
-                error: error
-            })
-        })
-    }
+var dataService = {    
+};
+dataService.hostName = 'http://localhost:3000';
+
+// this is only api supports cors for test request
+dataService.getProfile = function(url){
+    return fetch(this.hostName + url)
+    .then(function(res) {
+        return res.json();
+    })
+    .catch(function(err){
+        return err;
+    });
 }
+
+// dataService.getMenu = function(url){
+//     return fetch(this.hostName + url)
+//     .then(function(res){
+//         return res.json();
+//     });
+// }
+
+dataService.get = function(url){
+    return fetch(this.hostName + url)
+    .then(function(res){
+        return res.json();
+    });
+}
+
+dataService.post = function(url, data){
+    return fetch(this.hostName + url, {
+        method: 'POST',
+        body: JSON.stringify(data)
+    })
+    .then(function(res){
+        return res.json();
+    });
+}
+
+module.exports = dataService;
