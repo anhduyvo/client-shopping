@@ -1,3 +1,11 @@
+# demo shopping react
+- public site: reactjs
+- admin site: reactjs
+- web api: nodejs
+- database: mssql server
+
+
+---------------------------------------------------------------------------------
 react js + webpack + ES 2016
 - npm install
 - yarn install
